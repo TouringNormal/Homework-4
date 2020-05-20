@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<head>
+  <div>
+    <button id="game-over" onclick="restartGame()">Play again</button>
+  </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script type="text/javascript" src="sketch.js"></script>
+    <script type="text/javascript" src="Obstacle.js"></script>
+    <script type="text/javascript" src="TRex.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+  <html>      
+    <audio id="player" autoplay controls><source src="0.mp3" type="audio/mp3"></audio>
+    </body>
+    <script>
+        var music = document.getElementById("player").autoplay;
+        var x = 0;
+            
+        music.volume = 0.05;   
+        $("#player").bind("ended", function(){
+        x = x + 1;
+        music.src = x % 7 + ".mp3";
+        music.load();
+        music.play();
+        });
+      </script>
+    </html>
+
+</head>
