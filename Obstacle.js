@@ -9,16 +9,11 @@ function Obstacle(x, size, horizon, color) {
       this.onScreen = true;
   }
   
-  /**
-      *	handle x and onScreen values
-      */
+//x väärtustega tegelemine
   Obstacle.prototype.update = function(speed) {
   
-      /* check if offscreen */
       this.onScreen = (this.x > -this.size);
-  
-      /* movement */
-      this.x -= speed;
+      this.x -= speed; //liikumine mängija suunas
   };
   
   Obstacle.prototype.draw = function() {
@@ -30,20 +25,19 @@ function Obstacle(x, size, horizon, color) {
   };
 
   
-  /**
-      * checks for collisions
-      */
+  //kokkupõrked
   Obstacle.prototype.hits = function(dino) {
   
       var halfSize = this.size / 2;
-      var minimumDistance = halfSize + (dino.radius); // closest before collision
+      var minimumDistance = halfSize + (dino.radius); //lähim
   
-      /* find center coordinates */
+      //keskkoordinaadid
       var xCenter = this.x + halfSize;
       var yCenter = this.y + halfSize;
   
-      var distance = dist(xCenter, yCenter, dino.x, dino.y); // calculate distance from centers
+      var distance = dist(xCenter, yCenter, dino.x, dino.y);
   
-      return (distance < minimumDistance); // return result
+      return (distance < minimumDistance);
   };
+
   

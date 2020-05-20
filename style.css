@@ -2,6 +2,7 @@ body{
     background-color: black;
 }
 
+/*nupud*/
 #containerButton{
     
     display: flex;
@@ -44,12 +45,13 @@ button:active{
     cursor: pointer;
 }
 
+/*autorid*/
 #creator{ 
 
     width: 100%;
     background-color: black ;
     padding: none;
-    color: rgb(192, 192, 192);
+    color: rgba(98, 247, 252, 0.7);
     display: flex;
 
     align-items: center;
