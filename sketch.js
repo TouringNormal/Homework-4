@@ -144,15 +144,13 @@ function endGame() {
   textSize(40);
   text("GAME OVER", width / 2, height / 2);
   textSize(20);
-  text("Press the button to restart", width / 2, height / 2 + 20);
+  text("Press Play Again button to restart", width / 2, height / 2 + 20);
 }
 
 function restartGame(){
   location.reload();
 }
 
-STYLE.CSS
 
-body{
-    background-color: black;
-}
+
+
